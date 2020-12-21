@@ -28,6 +28,7 @@ export default () => (
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
+      margin-top: 0px;
       padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
     `}
   >

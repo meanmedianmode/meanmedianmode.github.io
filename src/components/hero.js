@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   background-position: top 0% center;
-  min-height: 600px;
+  min-height: 550px;
 `;
 
 const Hero = () => {

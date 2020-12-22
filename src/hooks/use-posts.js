@@ -9,12 +9,10 @@ const usePosts = () => {
             title
             author
             slug
+            category
             image {
               sharp: childImageSharp {
-                fluid(
-                  maxWidth: 140
-                  maxHeight: 100
-                ) {
+                fluid(maxWidth: 140, maxHeight: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -30,6 +28,7 @@ const usePosts = () => {
     title: post.frontmatter.title,
     author: post.frontmatter.author,
     slug: post.frontmatter.slug,
+    category: post.frontmatter.category,
     image: post.frontmatter.image,
     excerpt: post.excerpt,
   }));

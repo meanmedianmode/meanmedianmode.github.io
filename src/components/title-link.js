@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-const ReadLink = styled(Link)`
+const TitleLink = styled(Link)`
+  color: black;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
   text-decoration: none;
 `;
 
-export default ReadLink;
+export default TitleLink;

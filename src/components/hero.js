@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const ImageBackground = styled(BackgroundImage)`
@@ -10,20 +10,20 @@ const ImageBackground = styled(BackgroundImage)`
 `;
 
 const Hero = () => {
-  const { image } =  useStaticQuery(graphql`
+  const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "blog-header.png" }) {
         sharp: childImageSharp {
-          fluid(maxWidth: 1174, quality: 90) {
+          fluid(maxWidth: 1174, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
-  `)
+  `);
   return (
-   <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft"/>
-  )
-}
+    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft" />
+  );
+};
 
 export default Hero;

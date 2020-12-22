@@ -20,7 +20,11 @@ export const query = graphql`
 export default ({ data: { mdx: post } }) => (
   <Layout>
     <h1>{post.frontmatter.title}</h1>
-    <p css={css`font-size: 0.75rem;`}>
+    <p
+      css={css`
+        font-size: 0.75rem;
+      `}
+    >
       {post.frontmatter.author}
     </p>
     <MDXRenderer>{post.body}</MDXRenderer>
